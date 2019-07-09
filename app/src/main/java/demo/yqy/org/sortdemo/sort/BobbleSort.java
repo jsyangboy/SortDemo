@@ -38,36 +38,4 @@ public class BobbleSort {
         return arr;
     }
 
-
-    public static int[] arr = new int[20];
-    private static Random random = new Random();
-
-    public static void main(String[] args) {
-
-        /**
-         * 生成随机数
-         */
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(100);
-        }
-
-        prinArr(arr);
-        bubbleSort(arr);
-        System.out.println("");
-        prinArr(arr);
-    }
-
-    private static void prinArr(int arr[]) {
-        if (arr == null) {
-            return;
-        }
-        if (arr.length <= 0) {
-            return;
-        }
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("-" + arr[i]);
-        }
-    }
-
 }
