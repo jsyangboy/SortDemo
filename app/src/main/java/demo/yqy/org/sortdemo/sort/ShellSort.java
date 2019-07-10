@@ -12,4 +12,35 @@ package demo.yqy.org.sortdemo.sort;
  * 时间复杂度：通常认为是O(N3/2) ，未验证　　稳定性：不稳定
  */
 public class ShellSort {
+
+    public static int[] shellSort(int arr[]) {
+        if (arr == null || arr.length == 0) {
+            return arr;
+        }
+
+        int d = arr.length;
+
+        while (true) {
+            d = d / 2;
+            for (int x = 0; x < d; x++) {
+
+                for (int i = x + d; i < arr.length; i = i + d) {
+                    int temp = arr[i];
+                    int j;
+
+                    for (j = i - d; j >= 0 && arr[j] > temp; j = j - d) {
+                        arr[j + d] = arr[j];
+                    }
+
+                    arr[j + d] = temp;
+                }
+
+            }
+
+            if (d == 1) {
+                break;
+            }
+        }
+        return arr;
+    }
 }
