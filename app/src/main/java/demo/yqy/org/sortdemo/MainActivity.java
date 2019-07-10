@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import demo.yqy.org.sortdemo.sort.BobbleSort;
+import demo.yqy.org.sortdemo.sort.BucketSort;
 import demo.yqy.org.sortdemo.sort.HeapSort;
 import demo.yqy.org.sortdemo.sort.InserSort;
 import demo.yqy.org.sortdemo.sort.QuickSort;
@@ -32,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
         //QuickSort.quickSort(arr,0,arr.length-1);//快速排序
         //SelectSort.selectSort(arr);//选择排序
         //ShellSort.shellSort(arr);//希尔排序
-        HeapSort.heapSort(arr);//堆排序
-        
+        //HeapSort.heapSort(arr);//堆排序
+        BucketSort.bucketSort(arr);//桶序
+
         System.out.println("");
         Utils.prinArr(arr);
 
