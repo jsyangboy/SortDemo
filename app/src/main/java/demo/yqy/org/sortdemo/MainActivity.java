@@ -8,6 +8,7 @@ import demo.yqy.org.sortdemo.sort.BucketSort;
 import demo.yqy.org.sortdemo.sort.CountSort;
 import demo.yqy.org.sortdemo.sort.HeapSort;
 import demo.yqy.org.sortdemo.sort.InserSort;
+import demo.yqy.org.sortdemo.sort.MergeSort;
 import demo.yqy.org.sortdemo.sort.QuickSort;
 import demo.yqy.org.sortdemo.sort.SelectSort;
 import demo.yqy.org.sortdemo.sort.ShellSort;
@@ -36,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
         //ShellSort.shellSort(arr);//希尔排序
         //HeapSort.heapSort(arr);//堆排序
         //BucketSort.bucketSort(arr);//桶序
-        CountSort.countSort(arr);//基数排序
+        //CountSort.countSort(arr);//基数排序
+        int newarr[] = MergeSort.mergeSort(arr);//归并排序
 
         System.out.println("");
-        Utils.prinArr(arr);
+        Utils.prinArr(newarr);
 
     }
 }
